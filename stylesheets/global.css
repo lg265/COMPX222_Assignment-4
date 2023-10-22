@@ -1,0 +1,131 @@
+:root {
+    /* Color pack made using https://colorffy.com/dark-theme-generator */
+    /** CSS DARK THEME PRIMARY COLORS */
+    --primary-100: #94b4ff;
+    --primary-200: #a1bcff;
+    --primary-300: #aec4ff;
+    --primary-400: #baccff;
+    --primary-500: #c6d5ff;
+    --primary-600: #d2ddff;
+    
+    /** CSS DARK THEME SURFACE COLORS */
+    --dark-100: #2e2e2e;
+    --dark-200: #424242;
+    --dark-300: #575757;
+    --dark-400: #6d6d6d;
+    --dark-500: #848484;
+    --dark-600: #9b9b9b;
+    
+    /** CSS DARK THEME MIXED SURFACE COLORS */
+    --mixed-100: #22314a;
+    --mixed-200: #38455c;
+    --mixed-300: #4f596f;
+    --mixed-400: #666f82;
+    --mixed-500: #7e8596;
+    --mixed-600: #979daa;
+}
+
+body, html {
+    background-color: var(--dark-100);
+    margin: 12px;
+    min-width: 1000px;
+    position:relative;
+    color: #fff;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Formatting for the cards */
+.card{
+    padding: 50px;
+    border-radius: 24px;
+    border-color: var(--dark-100);
+    border-width: 8px;
+    border-style:double;
+    background-color: var(--dark-200);
+    overflow:visible;
+    max-width: 300px;
+    height: 200px;
+    margin: auto;
+}
+h1, h2{
+    text-align: center;
+}
+
+/* make the links readable */
+a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+/* Format title */
+.title{
+    max-width: 1000px;
+    height: auto;
+    padding: 0px;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: block;
+    align-self: stretch;
+}
+
+/* Grid formatting */
+._header {
+    grid-area: header;
+    text-align: center;
+}
+._main {
+    grid-area: main;
+}
+._right {
+    grid-area: right;
+    display: block;
+}
+._right img{
+    object-fit: scale-down;
+}
+.grid-container {
+    padding: 25px 50px 50px 50px;
+    margin: 24px;
+    display: grid;
+    grid-template-areas:
+        'header right'
+        'main   right';
+    gap: 2px;
+    max-width: 500px;
+    height: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto min-content;
+    grid-template-rows: 120px auto;
+}
+
+/* buttons formatting */
+.buttons{
+    align-self: end;
+}
+.buttons button{
+    padding: 8px;
+    color: #fff;
+    background-color: var(--dark-300);
+
+    text-decoration: none;
+    border: 8px double var(--dark-200);
+    border-radius: 12px;
+}
+.buttons button:hover {
+    background-color: var(--dark-400);
+}
+.buttons button:active {
+    background-color: var(--dark-600);
+}
+.buttons button img{
+    width: 50px;
+}
+
+.error{
+    background-color: #722222;
+    border-radius: 6px;
+    display: none;
+}
